@@ -62,3 +62,9 @@ zip' :: [a] -> [b] -> [(a, b)]
 zip' _ [] = []
 zip' [] _ = []
 zip' (x:xs) (y:ys) = (x, y) : zip' xs ys
+
+twice :: (a -> a) -> a -> a
+twice f x = f (f x)
+
+thrice :: (a -> a) -> a -> a
+thrice f x = (f . f . f) x

@@ -32,3 +32,16 @@ Write a function that generates sequence with three parameters, start, end, and 
 
 
 Write a function that generates a palindrome from a list, `mkPalindrome :: [a] -> [a]` and check with is Palindrome
+
+
+Write a program that does a very simple 'compression' by replacing repeating elements with number of repetition. Ex. AAAACCCBBA => A4C3B2A1
+
+```hs
+s1 = "AAA"
+head s1
+head s1 : show (length s1)
+
+compressOne s = head s : show (length s)
+compress = concat . map compressOne . Data.List.group
+compress str
+```

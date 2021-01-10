@@ -29,3 +29,9 @@ grade score
   | score > 80 = 'B'
   | score > 70 = 'C'
   | otherwise = 'F'
+
+-- where
+initials :: (String, String) -> String
+initials name = [first] ++ "." ++ [last]
+  where first = head (fst name)
+        last = head (snd name)

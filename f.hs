@@ -44,5 +44,7 @@ quicksort (x:xs) = quicksort less ++ [x] ++ quicksort more
         more = [y | y <- xs, y >= x]
 
 -- sum
-sumx [] = 0
-sumx xs = head xs + (sumx . tail) xs
+sum' :: [Int] -> Int
+sum' [] = 0
+-- sum' xs = head xs + (sum' . tail) xs
+sum' (x:xs) = x + sum' xs

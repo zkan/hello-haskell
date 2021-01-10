@@ -49,3 +49,11 @@ sum' :: [Int] -> Int
 sum' [x] = x
 -- sum' xs = head xs + (sum' . tail) xs
 sum' (x:xs) = x + sum' xs
+
+length' :: [a] -> Int
+length' [] = 0
+length' (x:xs) = 1 + length' xs
+
+-- reverse' :: [a] -> [a]
+
+-- zip' :: [a] -> [b] -> [(a, b)]

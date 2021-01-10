@@ -14,8 +14,7 @@ countUniq str
 `it` คือผลของการ evaluate ล่าสุดของ REPL
 
 
-Write a simple palindrome checker
-isPalindrome :: [a] -> Bool
+Write a simple palindrome checker `isPalindrome :: [a] -> Bool`
 
 ```hs
 p = "tenet"
@@ -29,8 +28,7 @@ isPalindrome np
 ```
 
 
-Write a function that generates sequence with three parameters, start, end, and step
-mkSequence :: Int -> Int -> Int -> [Int]
+Write a function that generates sequence with three parameters, start, end, and step `mkSequence :: Int -> Int -> Int -> [Int]`
 
 
-Write a function that generates a palindrome from a list, mkPalindrom :: [a] -> [a] and check with is Palindrome
+Write a function that generates a palindrome from a list, `mkPalindrome :: [a] -> [a]` and check with is Palindrome

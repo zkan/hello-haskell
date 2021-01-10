@@ -68,3 +68,14 @@ twice f x = f (f x)
 
 thrice :: (a -> a) -> a -> a
 thrice f x = (f . f . f) x
+
+map' :: (a -> b) -> [a] -> [b]
+--map' f xs = [f x | x <- xs]
+map' _ [] = []
+map' f (x:xs) = f x : map' f xs
+
+filter' :: (a -> Bool) -> [a] -> [a]
+filter' _ [] = []
+filter' f (x:xs)
+  | f x       = x : filter' f xs
+  | otherwise = filter' f xs

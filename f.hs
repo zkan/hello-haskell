@@ -22,6 +22,7 @@ countElem (_:[]) = "one"
 countElem (_:_:[]) = "two"
 countElem _ = "many"
 
+-- guard
 grade :: Int -> Char
 grade score
   | score > 90 = 'A'

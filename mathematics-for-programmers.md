@@ -45,3 +45,15 @@ compressOne s = head s : show (length s)
 compress = concat . map compressOne . Data.List.group
 compress str
 ```
+
+### List Comprehension
+
+```hs
+[x | x <- [1..5]]
+[(a, b) | a <- [1..5], b <- ['A'..'C']]
+isPrime x = [1, x] == [y | y <- [1..x], x `mod` y == 0]
+
+-- Infinite Fibonacci
+fibs = 0 : 1 : [a + b | (a, b) <- zip fibs (tail fibs)]
+take 10 fibs
+```
